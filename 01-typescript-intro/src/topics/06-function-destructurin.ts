@@ -1,6 +1,6 @@
 
 // Interface datos
-interface Product {
+export interface Product {
     description : string;
     price : number;
 }
@@ -25,9 +25,9 @@ const tablet : Product={
 
 
 //Cuando una funcion  va a resivir  mas de 3 argumentos se recomienda usar options
-function taxCalculator(options:TaxCalculatorOptions):[number,number]{
+export function taxCalculator(options:TaxCalculatorOptions):[number,number]{
 
-    const {tax , products }= options; 
+    const {tax , products }= options;
 
     let total= 0;
     products.forEach(({price}) =>{
@@ -38,7 +38,7 @@ function taxCalculator(options:TaxCalculatorOptions):[number,number]{
 }
 
 const shoppingCart = [phone,tablet];
-const tax= 0.15
+export const tax= 0.15
 
 const[total , taxTotal]  = taxCalculator({
     products:shoppingCart,
@@ -52,4 +52,3 @@ console.log('Tax',taxTotal );
 
 
 
-export{}
