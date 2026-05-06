@@ -4,8 +4,10 @@ import './style.css';
 //import './topics/02-object-interface'
 //import './topics/04-homework-types'
 //import './topics/05-basic-destructuring'
-//import './topics/06-function-destructurin' 
-import './topics/07-import-exports'
+//import './topics/06-function-destructurin'
+//import './topics/07-import-exports'
+import './topics/08-clase'
+
 
 const app = document.querySelector<HTMLDivElement>('#app')!;
 app.innerHTML='Hola Mundo '
