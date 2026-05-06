@@ -25,29 +25,29 @@ const tablet : Product={
 
 
 //Cuando una funcion  va a resivir  mas de 3 argumentos se recomienda usar options
-function taxCalculator(options:TaxCalculatorOptions):number[]{
+function taxCalculator(options:TaxCalculatorOptions):[number,number]{
+
+    const {tax , products }= options; 
 
     let total= 0;
-    options.products.forEach(product =>{
-        total+= product.price;
+    products.forEach(({price}) =>{
+        total+=price;
     });
-    return [total, total*options.tax];
+    return [total, total* tax];
 
 }
-
-
 
 const shoppingCart = [phone,tablet];
 const tax= 0.15
 
-const result = taxCalculator({
+const[total , taxTotal]  = taxCalculator({
     products:shoppingCart,
     tax: tax,
 });
 
 
-console.log('Total', result[0]);
-console.log('Total', result[1]);
+console.log('Total', total);
+console.log('Tax',taxTotal );
 
 
 
