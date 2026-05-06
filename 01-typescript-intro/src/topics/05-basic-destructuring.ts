@@ -25,9 +25,9 @@ const audioPlayer: AudioPlayer={
 //La destructuracion es y sirve para tomar de mi const varias piezas que me sirven
 const {song:anotherSong ,songDuration:duration,details}=audioPlayer
 const{author}=details;
-//console.log('Song',anotherSong);
-//console.log('Duration',duration);
-//console.log('author',author);
+console.log('Song',anotherSong);
+console.log('Duration',duration);
+console.log('author',author);
 
 
 //destructurizaccion de los arreglos V1
